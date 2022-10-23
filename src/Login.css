@@ -1,0 +1,63 @@
+.btn {
+    margin-top: 15px;
+    background-color:#FF9F29;
+    width: 330px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Poppins';
+    margin-left: 120px;
+    color: white;
+    
+}
+
+.flex-parent-element {
+    display: flex;
+    width: 100%;
+  }
+  
+  .flex-child-element {
+    flex: 2;  
+  }
+  
+  .flex-child-element:first-child {
+    margin-right: 0px;
+  }
+
+  .input {
+    
+    padding-left: 10px;
+    margin-left: 120px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    width: 320px;
+    height: 40px;
+    border: none;
+    background-color: #ECECEC;
+    font-family: 'Poppins';
+  }
+
+  input[type="text"], input[type="password"], textarea, select { 
+    outline: none;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-left: 120px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    font-family: 'Poppins';
+}
+
+.logo {
+    margin-top:150px;
+    margin-left: 110px;
+    
+}
+
+.image {
+    margin-top: 80px;
+    padding-right: 20px;
+  
+}
