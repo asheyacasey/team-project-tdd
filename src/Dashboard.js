@@ -1,5 +1,6 @@
 import { useState } from "react";
- import FetchRecords from "./FetchRecords";
+import FetchRecords from "./FetchRecords";
+import logo from './logo.svg';
 
 const Dashboard = (props) => { // props encapsulate the token and logout method
 
@@ -15,16 +16,26 @@ const Dashboard = (props) => { // props encapsulate the token and logout method
 
 	return(
 		<>
-			<h1>Menu</h1>
-			<ul>
-				<li>user {token}</li>
-				<li><a href='#\' onClick={onLogout}>Logout</a></li>
-			</ul>
-			{/* <h2>Users</h2> */}
-		    <div className= "App"> 
-			<FetchRecords/>	
-    </div>
-			<h4>Table here...</h4>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet"></link>
+			
+				<div className="navbar">
+					<div className="logo">
+					<img src={logo}/>
+					</div>
+					
+					<div className="signout">
+					<a href='#\' onClick={onLogout}>Sign Out</a>
+					</div>
+
+				</div>
+		
+			<div className="Container">
+				<div className= "App"> 
+				<FetchRecords/>	
+				</div>
+			</div>
+			
+		
 		</>
 	)
 };

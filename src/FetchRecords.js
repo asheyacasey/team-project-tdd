@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import "./Dashboard.css"
 
 // import Dashboard from './Dashboard';
 //   import Details from './Details'
@@ -45,10 +46,16 @@ function Info(){
 	return(
 
 	<>
-		nothing goes here 
-		<li data-testid ='user'>id: {index.id}</li>
-		<li>name:{index.name}</li>
-		<li>address:{index.address.city}</li>
+		<table id="customers">
+		<tr><th>Details</th><th></th></tr>
+		<tr>
+		<td data-testid ='user'>ID: {index.id}</td>
+		<td>Name: {index.name}</td>
+		<td>Email: {index.email}</td>
+		<td>Address: {index.address.street} {index.address.suite} {index.address.city} {index.address.zipcode}</td>
+		</tr>
+		</table>
+		
 		
 		</>
 
@@ -61,7 +68,8 @@ function Info(){
 	return !showDetails ? (
 		records ? (
 			<>
-				<h1>Users</h1>
+				
+				<h1>Users Table</h1>
 				<div>
 				{/* { 	records.length && records.map((rec, i)=>(
 			
@@ -69,7 +77,7 @@ function Info(){
 						
 					))
 				} */}
-				<table>
+				<table id="customers">
 						{/* { 	records.length && records.map((rec, i)=>(
 			
 						<li key={i} data-testid='user'> {rec.name} <br></br>{rec.email} 	</li>
@@ -78,7 +86,7 @@ function Info(){
 				} */}			
   <tr>
     <th>Name </th>
-    <th>UserName </th>
+    <th>User Name </th>
     <th>Email </th>
 	<th>Phone </th>
 	<th>Action </th>
@@ -96,8 +104,12 @@ function Info(){
 	</td>  */}
 	<td key ={i} data-testid='user'> <button
 				// onClick={()=> handleDetails(rec.id, rec.name, rec.address.city)}>
-					onClick={()=> handleDetails(rec)}>
+					onClick={()=> handleDetails(rec)}
+					className = 'button'
+					>
+				<span>
 				view details
+				</span>
 			</button></td>
 	 </tr>
 
@@ -105,7 +117,9 @@ function Info(){
 }
 </table>
 </div>
+		<div className='total'>
 		<h2 data-testid="total-users">Total Users: {totalUsers}</h2>
+		</div>
 			</>
 		):(
 			<p>Fetching...</p>
@@ -124,6 +138,7 @@ function Info(){
 		// 	</button></td>
 		// 		</records>
 		<>
+		<div className='Info'>
 		<Info/>
 
 		<button
@@ -132,7 +147,8 @@ function Info(){
 			>
 				back to page
 			</button>
-			</>
+			</div>
+		</>
 	)
 
 };

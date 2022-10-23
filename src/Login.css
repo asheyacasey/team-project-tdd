@@ -18,7 +18,9 @@
   }
   
   .flex-child-element {
-    flex: 2;  
+    flex: 1;
+  border: 2px solid blueviolet;
+  margin: 10px;
   }
   
   .flex-child-element:first-child {
@@ -50,7 +52,7 @@ h2 {
     font-family: 'Poppins';
 }
 
-.logo {
+.mylogo {
     margin-top:150px;
     margin-left: 110px;
     

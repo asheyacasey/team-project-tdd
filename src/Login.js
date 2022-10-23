@@ -1,6 +1,6 @@
 import { useState } from "react";
 import './Login.css';
-import logo from './assets/LOGO.svg';
+import mylogo from './assets/my-logo.svg';
 import image from './assets/Illustration.svg'
 
 
@@ -74,7 +74,7 @@ const Login = () => {
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet"></link>
          <div class="flex-parent-element"><div class="flex-child-element-left">
 
-         <div className="logo"> <img src={logo} className="App-logo"/></div>
+         <div className="mylogo"> <img src={mylogo} className="App-logo"/></div>
             <h2>Welcome back! Please enter your details.</h2>
             
             <input
