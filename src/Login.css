@@ -1,72 +1,75 @@
 .btn {
-    margin-top: 15px;
-    background-color:#FF9F29;
-    width: 330px;
-    height: 50px;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    font-family: 'Poppins';
-    margin-left: 120px;
-    color: white;
-    
+  margin-top: 15px;
+  background-color:#FF9F29;
+  width: 330px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: 'Poppins';
+  margin-left: 120px;
+  color: white;
+  
 }
 
-.flex-parent-element {
-    display: flex;
-    width: 100%;
-  }
+.input {
   
-  .flex-child-element {
-    flex: 1;
-  border: 2px solid blueviolet;
-  margin: 10px;
-  }
-  
-  .flex-child-element:first-child {
-    margin-right: 0px;
-  }
+  padding-left: 10px;
+  margin-left: 120px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  width: 320px;
+  height: 40px;
+  border: none;
+  background-color: #ECECEC;
+  font-family: 'Poppins';
+}
 
-  .input {
-    
-    padding-left: 10px;
-    margin-left: 120px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    width: 320px;
-    height: 40px;
-    border: none;
-    background-color: #ECECEC;
-    font-family: 'Poppins';
-  }
-
-  input[type="text"], input[type="password"], textarea, select { 
-    outline: none;
+input[type="text"], input[type="password"], textarea, select { 
+  outline: none;
 }
 
 h2 {
-    margin-top: 0px;
-    margin-left: 120px;
-    margin-bottom: 40px;
-    font-size: 15px;
-    font-family: 'Poppins';
+  margin-top: 0px;
+  margin-left: 120px;
+  margin-bottom: 40px;
+  font-size: 15px;
+  font-family: 'Poppins';
 }
 
 .mylogo {
-    margin-top:150px;
-    margin-left: 110px;
-    
-}
-
-.image {
-    margin-top: 80px;
-    padding-right: 20px;
+  margin-top:150px;
+  margin-left: 110px;
   
 }
 
+.image {
+  margin-top: 80px;
+  padding-right: 20px;
+
+}
+
 .warning {
-  padding-top: 20px;
-  padding-right: 10px;
-  color: red;
-  font-size: 12px;
+padding-top: 20px;
+padding-right: 10px;
+color: red;
+font-size: 12px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  border: 0.5rem outset pink;
+  outline: 0.5rem solid khaki;
+}
+
+.grid-child-left {
+  border: 0.5rem outset rgb(255, 0, 43);
+
+}
+
+.grid-child-right {
+  border: 0.5rem outset rgb(183, 255, 0);
+
 }
