@@ -52,7 +52,7 @@ const Login = () => {
                     setResult(data.token);
                     setShowDashboard(true);
                 } else {
-                    setResult('Error login. Please verify.')
+                    setResult('The email address or password is incorrect. Please enter a valid account again')
                 }
             })
             .catch((error) => {
@@ -102,7 +102,7 @@ const Login = () => {
                 Login
             </button>
             <br />
-            {/* <h2 data-testid="result-gross-pay">Server Reply: {result}</h2> */}
+            <h2  className="warning" data-testid="result-gross-pay">{result}</h2>
             </div>
             <div class="flex-child-element-left"><div className="image"> <img src={image}/></div></div>
 
