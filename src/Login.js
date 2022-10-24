@@ -3,10 +3,7 @@ import './Login.css';
 import mylogo from './assets/my-logo.svg';
 import image from './assets/Illustration.svg'
 
-
 import Dashboard from './Dashboard';
-
-
 
 const Login = () => {
     const [showDashboard, setShowDashboard] = useState(false);
@@ -67,6 +64,10 @@ const Login = () => {
     const handleLogout = () => {
         setShowDashboard(false);
         setResult('');
+        setUser({
+            email: '',
+            password: ''
+        });
     };
 
     return !showDashboard ? (
