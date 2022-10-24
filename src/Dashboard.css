@@ -30,7 +30,7 @@ a{
   position: absolute;
   width: 120px;
   height: 38px;
-  left: 90%;
+  left: 80%;
   top: 52px;
 }
 a:hover {
@@ -54,6 +54,7 @@ color: #3A5BA0;
 #customers td, #customers th {
   border: 1px solid #ddd;
   padding: 8px;
+  font-size: 15px;
 }
 
 #customers tr:nth-child(even){background-color: #ececec;}
@@ -68,6 +69,24 @@ color: #3A5BA0;
   color: white;
 }
 
+
+
+#customers2 td, #customers th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#customers2 tr:nth-child(even){background-color: #ececec;}
+
+#customers2 tr:hover {background-color: #ddd;}
+
+#customers2 th {
+  padding: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
 
 
 .button {

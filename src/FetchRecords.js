@@ -46,14 +46,47 @@ function Info(){
 	return(
 
 	<>
-		<table id="customers">
+		<table id="customers2">
+
 		<tr><th>Details</th><th></th></tr>
+
 		<tr>
-		<td data-testid ='user'>ID: {index.id}</td>
-		<td>Name: {index.name}</td>
-		<td>Email: {index.email}</td>
-		<td>Address: {index.address.street} {index.address.suite} {index.address.city} {index.address.zipcode}</td>
+		<td data-testid ='user'>ID:</td>
+		<td> {index.id}</td>
 		</tr>
+
+		<tr>
+		<td>Name</td>
+		<td>{index.name} </td>
+		</tr>
+
+		<tr>
+		<td>Email</td>
+		<td>{index.email}</td>
+		</tr>
+
+		<tr>
+		<td>Address</td>
+		<td>{index.address.street} {index.address.suite} {index.address.city} {index.address.zipcode}</td>
+		</tr>
+
+		<tr>
+		<td>Phone</td>
+		<td>{index.phone}</td>
+		</tr>
+
+		<tr>
+		<td>Website</td>
+		<td>{index.website}</td>
+		</tr>
+
+		<tr>
+		<td>Company</td>
+		<td>{index.company.name}</td>
+		</tr>
+
+		
+
 		</table>
 		
 		
@@ -140,13 +173,17 @@ function Info(){
 		<>
 		<div className='Info'>
 		<Info/>
-
-		<button
-				onClick={handleDetailsBack} 
-				data-testid="user"
-			>
-				back to page
-			</button>
+			<div className='btndiv'>
+				<button
+						onClick={handleDetailsBack} 
+						data-testid="user"
+						className='button'
+					>
+					<span className='back'>
+						Back to Overview
+						</span>
+					</button>
+				</div>
 			</div>
 		</>
 	)
