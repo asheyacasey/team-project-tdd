@@ -72,7 +72,8 @@ const Login = () => {
     return !showDashboard ? (
         <>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet"></link>
-         <div class="flex-parent-element"><div class="flex-child-element-left">
+        <div class="grid-container">
+        <div class="grid-child-left">
 
          <div className="mylogo"> <img src={mylogo} className="App-logo"/></div>
             <h2>Welcome back! Please enter your details.</h2>
@@ -104,7 +105,7 @@ const Login = () => {
             <br />
             <h2  className="warning" data-testid="result-gross-pay">{result}</h2>
             </div>
-            <div class="flex-child-element-left"><div className="image"> <img src={image}/></div></div>
+            <div class="grid-child-right"><div className="image"> <img src={image}/></div></div>
 
         </div>
 
