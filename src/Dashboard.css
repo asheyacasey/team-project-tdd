@@ -14,10 +14,6 @@
 img{
   pointer-events: none;
 }
-h1 {
-  margin-top: 50px;
-}
-
 
 a{
   text-decoration: none;   
@@ -131,9 +127,9 @@ color: #3A5BA0;
 
 .user-token{
   color: #3a5aa0e5;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .token{
-  margin-top: 130px;
+  margin-top: 150px;
 }
