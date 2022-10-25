@@ -107,7 +107,7 @@ const Login = () => {
             <h2  className="warning" data-testid="result-gross-pay">{result}</h2>
             </div>
             <div class="grid-child-right"><div className="image"> <img src={image}/></div></div>
-
+            <label data-testid = "user-token">{result}</label>
         </div>
 
         </>

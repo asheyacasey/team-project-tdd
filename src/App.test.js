@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/await-async-query */
 /* eslint-disable no-undef */
-import { render, screen, cleanup, waitFor } from "@testing-library/react";
+import { render, screen, cleanup, waitFor, fireEvent } from "@testing-library/react";
 import FetchRecords from "./FetchRecords";
 import Login from "./Login";
 
@@ -29,14 +29,13 @@ describe("Login screen",()=>{
 	});
 })
 
-describe("Check the logic.",()=>{
+describe("Check the correct Token.",()=>{
 
 	afterEach(cleanup);
 
 	it("Check the email data input", () => {		
 		render(<Login />);
 		const input1 = screen.getByTestId("email");
-		// eslint-disable-next-line no-undef
 		fireEvent.change(input1, { target: { value: "eve.holt@reqres.in" }});
 		expect(input1.value).toBe("eve.holt@reqres.in");
 	});
@@ -44,20 +43,19 @@ describe("Check the logic.",()=>{
 	it("Check the password data input", () => {		
 		render(<Login />);
 		const input2 = screen.getByTestId("password");
-		// eslint-disable-next-line no-undef
 		fireEvent.change(input2, { target: { value: "cityslicka" }});
 		expect(input2.value).toBe("cityslicka");
 	});
 
-	// it("Check if valid user with token", async () => {   
-	// 	render(<Login />);
-	// 	await waitFor(() => {
-	// 		//the line below was not discussed
-	// 		//is it just a general assumption (universal truth) that the token is there
-	// 		//we can do better testing for dynamic data once we use jest/cucumber
-	// 	    expect(screen.findByText('QpwL5tke4Pnpja7X4')).toBeTruthy() 
-	// 	})
-	// });
+	it("Check if valid user with token", async () => {   
+		render(<Login />);
+		await waitFor(() => {
+			//the line below was not discussed
+			//is it just a general assumption (universal truth) that the token is there
+			//we can do better testing for dynamic data once we use jest/cucumber
+		    expect(screen.findByText('QpwL5tke4Pnpja7X4')).toBeTruthy() 
+		})
+	});
 });
 
 
