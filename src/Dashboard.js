@@ -22,7 +22,6 @@ const Dashboard = (props) => { // props encapsulate the token and logout method
 					<div className="logo">
 					<img src={logo}/>
 					</div>
-					<label className = "user-token" data-testid = "user-token">{token}</label>
 					<div className="signout">
 					<a href='#\' onClick={onLogout}>Sign Out</a>
 					</div>
@@ -31,7 +30,10 @@ const Dashboard = (props) => { // props encapsulate the token and logout method
 		
 			<div className="Container">
 				<div className= "App"> 
-				<FetchRecords/>	
+					<div className="token">
+						<label className = "user-token" data-testid = "user-token">Token: {token}</label>
+						<FetchRecords/>	
+					</div>
 				</div>
 			</div>
 			
