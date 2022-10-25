@@ -98,6 +98,11 @@ color: #3A5BA0;
   cursor: pointer;
   margin: 5px;
 }
+
+.user-token{
+  color: transparent;
+}
+
 .button span {
   cursor: pointer;
   transition: 0.7s;
