@@ -92,12 +92,12 @@ function Info(){
 						{
 							records.length && records.map((rec,i)=>(  
 								<tr>
-									<td key={i} data-testid='user'>{rec.name}</td> 
-									<td key={i} data-testid='user'>{rec.username}</td> 
-									<td key={i} data-testid='user'>{rec.email}</td> 
-									<td key={i} data-testid='user'>{rec.phone}</td> 
-									<td key ={i} data-testid='user'> 
-										<button	onClick={()=> handleDetails(rec)} className = 'button'> 
+									<td key={i} data-testid='name'>{rec.name}</td> 
+									<td key={i} data-testid='username'>{rec.username}</td> 
+									<td key={i} data-testid='email'>{rec.email}</td> 
+									<td key={i} data-testid='phone'>{rec.phone}</td> 
+									<td key ={i} data-testid='button'> 
+										<button	onClick={()=> handleDetails(rec)} className = 'button' data-testid='btn-view-details'> 
 											<span> View details </span>
 										</button>
 									</td>

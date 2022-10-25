@@ -1,5 +1,65 @@
+/* eslint-disable testing-library/await-async-query */
+/* eslint-disable no-undef */
 import { render, screen, cleanup, waitFor } from "@testing-library/react";
 import FetchRecords from "./FetchRecords";
+import Login from "./Login";
+
+describe("Login screen",()=>{
+	it("has an input for email",()=>{
+		render(<Login/>);
+		const input = screen.getByTestId("email");
+		expect(input).toBeInTheDocument();
+
+		expect(input).toHaveAttribute("type", "text");
+	});
+
+    it("has an input for password",()=>{
+		render(<Login/>);
+		const input = screen.getByTestId("password");
+		expect(input).toBeInTheDocument();
+
+		expect(input).toHaveAttribute("type", "password");
+	});
+
+    it("has a login button that verifies email and password",()=>{
+		render(<Login/>)
+
+		const btn = screen.getByTestId("send-user-login");
+		expect(btn).toBeInTheDocument();
+	});
+})
+
+describe("Check the logic.",()=>{
+
+	afterEach(cleanup);
+
+	it("Check the email data input", () => {		
+		render(<Login />);
+		const input1 = screen.getByTestId("email");
+		// eslint-disable-next-line no-undef
+		fireEvent.change(input1, { target: { value: "eve.holt@reqres.in" }});
+		expect(input1.value).toBe("eve.holt@reqres.in");
+	});
+
+	it("Check the password data input", () => {		
+		render(<Login />);
+		const input2 = screen.getByTestId("password");
+		// eslint-disable-next-line no-undef
+		fireEvent.change(input2, { target: { value: "cityslicka" }});
+		expect(input2.value).toBe("cityslicka");
+	});
+
+	// it("Check if valid user with token", async () => {   
+	// 	render(<Login />);
+	// 	await waitFor(() => {
+	// 		//the line below was not discussed
+	// 		//is it just a general assumption (universal truth) that the token is there
+	// 		//we can do better testing for dynamic data once we use jest/cucumber
+	// 	    expect(screen.findByText('QpwL5tke4Pnpja7X4')).toBeTruthy() 
+	// 	})
+	// });
+});
+
 
 // describe("Testing a fetch...", ()=>{
 	
@@ -20,7 +80,6 @@ import FetchRecords from "./FetchRecords";
 
 
 describe("Testing results after fetch...", ()=>{
-	
 	afterEach(cleanup);
 
 	it("Check if a certain user exists...(Leanne Graham)", async () => {   
@@ -67,7 +126,7 @@ describe("Testing results after fetch...", ()=>{
 
 	it("Check initial no of users in list...", async () => {  
 		render(<FetchRecords />);
-		expect(await screen.getByTestId("total-users")).toHaveTextContent("Total Users: 0"); 	
+		expect(screen.getByTestId("total-users")).toHaveTextContent("Total Users: 0"); 	
 	});
 
 
