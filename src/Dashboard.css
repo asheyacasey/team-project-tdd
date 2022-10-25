@@ -15,9 +15,7 @@ img{
   pointer-events: none;
 }
 h1 {
-
-  padding: 14px 16px;
-  margin-top: 120px;
+  margin-top: 50px;
 }
 
 
@@ -99,9 +97,6 @@ color: #3A5BA0;
   margin: 5px;
 }
 
-.user-token{
-  color: transparent;
-}
 
 .button span {
   cursor: pointer;
@@ -132,4 +127,13 @@ color: #3A5BA0;
 
 .Info{
   padding-top: 150px;
+}
+
+.user-token{
+  color: #3a5aa0e5;
+  font-size: 30px;
+}
+
+.token{
+  margin-top: 130px;
 }
