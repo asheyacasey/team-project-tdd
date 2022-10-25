@@ -61,6 +61,11 @@ color: red;
 font-size: 12px;
 }
 
+
+.mytoken {
+  color: transparent;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
