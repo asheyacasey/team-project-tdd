@@ -36,13 +36,9 @@ a{
 a:hover {
 color: #3A5BA0;
 }
-.App{
-  
-  position: center;
-}
 
 .total{
-  padding-left: 10px;
+ padding-top: 10px; 
 }
 
 #customers {
@@ -102,18 +98,13 @@ color: #3A5BA0;
   cursor: pointer;
   margin: 5px;
 }
-
 .button span {
   cursor: pointer;
-  display: inline-block;
-  position: relative;
   transition: 0.7s;
 }
 
 .button span:after {
   content: '\00bb';
-  position: absolute;
-  opacity: 0;
   top: 0;
   right: -10px;
   transition: 0.7s;
