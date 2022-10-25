@@ -60,16 +60,4 @@ font-size: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  border: 0.5rem outset pink;
-  outline: 0.5rem solid khaki;
-}
-
-.grid-child-left {
-  border: 0.5rem outset rgb(255, 0, 43);
-
-}
-
-.grid-child-right {
-  border: 0.5rem outset rgb(183, 255, 0);
-
 }
