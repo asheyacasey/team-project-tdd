@@ -9,12 +9,14 @@
   font-family: 'Poppins';
   margin-left: 120px;
   color: white;
+  cursor: pointer;
+  transition: 0.3s;
   
 }
 .btn:hover {
   
   background-color: #3a5aa0e5;
-  box-shadow: 5px 3px #ff9f2938;
+  
 }
 
 .input {
